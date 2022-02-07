@@ -17,7 +17,7 @@ public class calcMethods {
 	
 	public static void addDot() {
 		if(dotPressed == false) {
-			rawEntry += ".";
+			rawEntry = rawEntry+".";
 			output.setText(rawEntry);
 			dotPressed = true;
 		}
@@ -64,7 +64,11 @@ public class calcMethods {
 			}
 			
 			previous = answer;
-			output.setText(String.valueOf(answer));
+			String print = String.valueOf(answer);
+			if (print.substring(print.length()-2).equals(".0")) {
+				print = print.substring(0,print.length()-2);
+			}
+			output.setText(print);
 			resetBooleans();
 		}
 	}

@@ -1,5 +1,6 @@
 package calculatriceJava;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.Color;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -165,14 +166,14 @@ public class CalcUI extends JFrame {
 			}
 		});
 		btnEqual.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnEqual.setBackground(Color.DARK_GRAY);
+		btnEqual.setBackground(Color.BLACK);
 		btnEqual.setBounds(279, 361, 61, 40);
 		getContentPane().add(btnEqual);
 		
 		area = new JTextArea();
 		area.setBackground(Color.LIGHT_GRAY);
 		area.setEditable(false);
-		area.setFont(new Font("Monospaced", Font.PLAIN, 19));
+		area.setFont(new Font("Lucida Sans", Font.BOLD, 22));
 		area.setBounds(38, 29, 302, 99);
 		getContentPane().add(area);
 		
@@ -184,7 +185,7 @@ public class CalcUI extends JFrame {
 		});
 		btnPlus.setForeground(Color.WHITE);
 		btnPlus.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnPlus.setBackground(Color.DARK_GRAY);
+		btnPlus.setBackground(Color.BLACK);
 		btnPlus.setBounds(279, 311, 61, 40);
 		getContentPane().add(btnPlus);
 		
@@ -196,7 +197,7 @@ public class CalcUI extends JFrame {
 		});
 		btnMinus.setForeground(Color.WHITE);
 		btnMinus.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnMinus.setBackground(Color.DARK_GRAY);
+		btnMinus.setBackground(Color.BLACK);
 		btnMinus.setBounds(279, 261, 61, 40);
 		getContentPane().add(btnMinus);
 		
@@ -208,7 +209,7 @@ public class CalcUI extends JFrame {
 		});
 		btnDivide.setForeground(Color.WHITE);
 		btnDivide.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnDivide.setBackground(Color.DARK_GRAY);
+		btnDivide.setBackground(Color.BLACK);
 		btnDivide.setBounds(279, 208, 61, 40);
 		getContentPane().add(btnDivide);
 		
@@ -220,7 +221,7 @@ public class CalcUI extends JFrame {
 		});
 		btnMultiply.setForeground(Color.WHITE);
 		btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnMultiply.setBackground(Color.DARK_GRAY);
+		btnMultiply.setBackground(Color.BLACK);
 		btnMultiply.setBounds(279, 158, 61, 40);
 		getContentPane().add(btnMultiply);
 		
@@ -232,7 +233,7 @@ public class CalcUI extends JFrame {
 		});
 		btnC.setForeground(Color.WHITE);
 		btnC.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnC.setBackground(Color.DARK_GRAY);
+		btnC.setBackground(Color.BLACK);
 		btnC.setBounds(38, 158, 61, 40);
 		getContentPane().add(btnC);
 		
@@ -244,7 +245,7 @@ public class CalcUI extends JFrame {
 		});
 		btnCE.setForeground(Color.WHITE);
 		btnCE.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnCE.setBackground(Color.DARK_GRAY);
+		btnCE.setBackground(Color.BLACK);
 		btnCE.setBounds(119, 158, 61, 40);
 		getContentPane().add(btnCE);
 		
@@ -256,11 +257,13 @@ public class CalcUI extends JFrame {
 		});
 		btnDelete.setForeground(Color.WHITE);
 		btnDelete.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnDelete.setBackground(Color.DARK_GRAY);
+		btnDelete.setBackground(Color.BLACK);
 		btnDelete.setBounds(200, 158, 61, 40);
 		getContentPane().add(btnDelete);
 		setBackground(Color.GRAY);
 		setResizable(false);
+		//area.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+		
 		
 		this.setVisible(true);
 	}
