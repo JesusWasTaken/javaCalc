@@ -24,11 +24,15 @@ public class calcMethods {
 	}
 	
 	public static void operator(String operation ) {
-		if (rawEntry != "") {
-			savedOperation = operation;
-			output.setText(operation);
-			previous = Float.valueOf(rawEntry);
-			resetBooleans();
+		if (rawEntry != "" && savedOperation == "") {
+			try {
+				savedOperation = operation;
+				output.setText(operation);
+				previous = Float.valueOf(rawEntry);
+				resetBooleans();	
+			} catch (Exception e) {
+				System.err.println(e);
+			}
 		} else {
 			output.setText("ERROR : please enter a number first");
 		}
@@ -81,11 +85,17 @@ public class calcMethods {
 	}
 	
 	public static void del() {
-		if(rawEntry.substring(rawEntry.length()-1).equals(".")) {
-			dotPressed = false;
+		if(rawEntry.length()>0) {
+			if(rawEntry.substring(rawEntry.length()-1).equals(".")) {
+				dotPressed = false;
+			}
+			if (rawEntry.length() == 1) {
+				rawEntry = "";
+			} else  {
+				rawEntry = rawEntry.substring(0,rawEntry.length()-1);
+			}
+			output.setText(rawEntry);
 		}
-		rawEntry = rawEntry.substring(0,rawEntry.length()-1);
-		output.setText(rawEntry);
 	}
 	
 	public static void delCurr() {

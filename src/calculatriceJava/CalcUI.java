@@ -159,6 +159,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnPosNeg);
 		
 		JButton btnEqual = new JButton("=");
+		btnEqual.setBorderPainted(false);
 		btnEqual.setForeground(Color.WHITE);
 		btnEqual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -171,6 +172,8 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnEqual);
 		
 		area = new JTextArea();
+		area.setWrapStyleWord(true);
+		area.setLineWrap(true);
 		area.setBackground(Color.LIGHT_GRAY);
 		area.setEditable(false);
 		area.setFont(new Font("Lucida Sans", Font.BOLD, 22));
@@ -178,6 +181,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(area);
 		
 		JButton btnPlus = new JButton("+");
+		btnPlus.setBorderPainted(false);
 		btnPlus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.operator("+");
@@ -190,6 +194,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnPlus);
 		
 		JButton btnMinus = new JButton("-");
+		btnMinus.setBorderPainted(false);
 		btnMinus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.operator("-");
@@ -202,6 +207,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnMinus);
 		
 		JButton btnDivide = new JButton("/");
+		btnDivide.setBorderPainted(false);
 		btnDivide.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.operator("/");
@@ -214,6 +220,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnDivide);
 		
 		JButton btnMultiply = new JButton("*");
+		btnMultiply.setBorderPainted(false);
 		btnMultiply.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.operator("*");
@@ -226,6 +233,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnMultiply);
 		
 		JButton btnC = new JButton("C");
+		btnC.setBorderPainted(false);
 		btnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.reset();
@@ -238,6 +246,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnC);
 		
 		JButton btnCE = new JButton("CE");
+		btnCE.setBorderPainted(false);
 		btnCE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.delCurr();
@@ -250,6 +259,7 @@ public class CalcUI extends JFrame {
 		getContentPane().add(btnCE);
 		
 		JButton btnDelete = new JButton("<-");
+		btnDelete.setBorderPainted(false);
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcMethods.del();
