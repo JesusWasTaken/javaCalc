@@ -24,18 +24,23 @@ public class calcMethods {
 	}
 	
 	public static void operator(String operation ) {
-		if (rawEntry != "" && savedOperation == "") {
-			try {
-				savedOperation = operation;
-				output.setText(operation);
-				previous = Float.valueOf(rawEntry);
-				resetBooleans();	
-			} catch (Exception e) {
-				System.err.println(e);
+		
+		if (savedOperation == "") {
+			savedOperation = operation;
+			output.setText(operation);
+			
+			if (rawEntry != "") {
+				try {
+					previous = Float.valueOf(rawEntry);
+				} catch (Exception e) {
+					System.err.println(e);
+				}	
 			}
 		} else {
-			output.setText("ERROR : please enter a number first");
+			output.setText("You already have an operation stocked");
 		}
+		resetBooleans();
+		
 	}
 	
 	public static void calculate() {
@@ -51,6 +56,7 @@ public class calcMethods {
 				break;
 			case "+":
 				answer = previous + operand;
+				System.out.println(answer);
 				break;
 			case "/":
 				if (operand == 0) {
@@ -73,6 +79,7 @@ public class calcMethods {
 				print = print.substring(0,print.length()-2);
 			}
 			output.setText(print);
+			savedOperation = "";
 			resetBooleans();
 		}
 	}
